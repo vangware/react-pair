@@ -1,0 +1,63 @@
+{
+	"name": "react-pair",
+	"description": "Util to help with the paired hook pattern",
+	"version": "1.0.0",
+	"author": {
+		"email": "hello@vangware.com",
+		"name": "Vangware",
+		"url": "https://vangware.com"
+	},
+	"bugs": "https://github.com/vangware/react-pair/issues",
+	"devDependencies": {
+		"@types/node": "^17.0.22",
+		"@types/react": "^17.0.41",
+		"@types/react-dom": "^17.0.14",
+		"@vangware/configs": "^2.0.9",
+		"@vangware/test": "^9.1.2",
+		"@vangware/types": "^2.4.0",
+		"c8": "^7.11.0",
+		"eslint": "^8.11.0",
+		"npm-run-all": "^4.1.5",
+		"prettier": "^2.6.0",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"rimraf": "^3.0.2",
+		"stylelint": "^14.6.0",
+		"ts-node": "^10.7.0",
+		"typedoc": "^0.22.13",
+		"typescript": "^4.6.2"
+	},
+	"exports": {
+		".": "./dist/index.js"
+	},
+	"files": [
+		"dist"
+	],
+	"homepage": "https://github.com/vangware/react-pair#readme",
+	"keywords": [
+		"typescript",
+		"vangware"
+	],
+	"license": "MIT",
+	"peerDependencies": {
+		"@types/react": "^17.0.41",
+		"react": "^17.0.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vangware/react-pair.git"
+	},
+	"scripts": {
+		"clean": "rimraf ./dist",
+		"compile": "tsc --project ./tsconfig.dist.json",
+		"document": "typedoc",
+		"lint": "eslint {src,tests}/*.ts",
+		"lint:fix": "eslint {src,tests}/**/*.ts --fix",
+		"pre-compile": "tsc --noEmit --project tsconfig.dist.json",
+		"prepublishOnly": "run-s clean compile prettify",
+		"prettify": "prettier --write --loglevel warn './dist/**/*.{js,ts}'",
+		"test": "NODE_OPTIONS='--loader ts-node/esm' c8 test"
+	},
+	"type": "module",
+	"types": "./dist/index.d.ts"
+}
