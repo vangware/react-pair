@@ -33,8 +33,12 @@
 	"files": [
 		"dist"
 	],
-	"homepage": "https://github.com/vangware/react-pair#readme",
+	"homepage": "https://react-pair.vangware.com",
 	"keywords": [
+		"hooks",
+		"pair",
+		"react",
+		"tsx",
 		"typescript",
 		"vangware"
 	],
