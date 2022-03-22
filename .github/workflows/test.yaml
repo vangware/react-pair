@@ -1,0 +1,28 @@
+name: Test & Coverage
+on: [push]
+jobs:
+    build:
+        name: Build
+        runs-on: ubuntu-latest
+        steps:
+            - name: Use Checkout 2
+              uses: actions/checkout@v2
+
+            - name: Use Node.js 17
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 17.x
+
+            - name: Use pnpm 6
+              uses: pnpm/action-setup@v2
+              with:
+                  version: 6.x
+                  run_install: true
+
+            - name: Run tests
+              run: pnpm test
+
+            - name: Use Coveralls
+              uses: coverallsapp/github-action@master
+              with:
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
