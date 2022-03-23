@@ -55,7 +55,6 @@ import type { RenderFunction } from "./RenderFunction.js";
  * 		return <button type="button" {...props} />;
  * 	})
  *
- * // Inline without key but using current value for internal values.
  * const Component = (array: number[]) => (
  * 	<ul>
  * 		{array.map(key =>
@@ -79,7 +78,6 @@ import type { RenderFunction } from "./RenderFunction.js";
  * 		);
  * 	})
  *
- * // Inline without key but using current value for internal values.
  * const Component = (array: number[]) => (
  * 	<ul>
  * 		{array.map(pairedCountRender)}
