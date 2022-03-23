@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 -   This project adheres to [Semantic Versioning][semver].
 -   This project uses [Gitmoji][gitmoji]
 
+## 1.0.3
+
+-   :memo: a little better docs.
+
 ## 1.0.2
 
 -   :bug: fix README.md coverage and build status badges.
