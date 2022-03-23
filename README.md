@@ -122,7 +122,7 @@ Changelog can be found [HERE][changelog].
 
 <!-- Reference -->
 
-[build-status-badge]: https://img.shields.io/github/workflow/status/vangware/react-pair/Test.svg?style=for-the-badge&labelColor=666&color=2b7&link=https://github.com/vangware/react-pair/actions
+[build-status-badge]: https://img.shields.io/github/workflow/status/vangware/react-pair/Test%20&%20Coverage.svg?style=for-the-badge&labelColor=666&color=2b7&link=https://github.com/vangware/react-pair/actions
 [changelog]: https://github.com/vangware/react-pair/blob/main/CHANGELOG.md
 [coverage-badge]: https://img.shields.io/coveralls/github/vangware/react-pair.svg?style=for-the-badge&labelColor=666&color=2b7&link=https://coveralls.io/github/vangware/react-pair
 [documentation]: https://react-pair.vangware.com
