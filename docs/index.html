@@ -51,6 +51,14 @@
 <pre><code class="language-tsx"><span class="hl-10">import</span><span class="hl-1"> { </span><span class="hl-4">pair</span><span class="hl-1"> } </span><span class="hl-10">from</span><span class="hl-1"> </span><span class="hl-12">&quot;react-pair&quot;</span><span class="hl-1">;</span><br/><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">pairedCountRender</span><span class="hl-1"> = </span><span class="hl-3">pairedCount</span><span class="hl-1">(</span><span class="hl-4">usePairedCount</span><span class="hl-1"> </span><span class="hl-0">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">props</span><span class="hl-1"> = </span><span class="hl-3">usePairedCount</span><span class="hl-1">(</span><span class="hl-13">0</span><span class="hl-1">);</span><br/><br/><span class="hl-1">    </span><span class="hl-10">return</span><span class="hl-1"> (</span><br/><span class="hl-1">        </span><span class="hl-7">&lt;</span><span class="hl-8">li</span><span class="hl-7">&gt;</span><br/><span class="hl-1">            </span><span class="hl-7">&lt;</span><span class="hl-8">button</span><br/><span class="hl-1">                </span><span class="hl-11">type</span><span class="hl-1">=</span><span class="hl-12">&quot;button&quot;</span><br/><span class="hl-1">                </span><span class="hl-0">{</span><span class="hl-1">...</span><span class="hl-4">props</span><span class="hl-0">}</span><br/><span class="hl-1">            </span><span class="hl-7">/&gt;</span><br/><span class="hl-1">        </span><span class="hl-7">&lt;/</span><span class="hl-8">li</span><span class="hl-7">&gt;</span><br/><span class="hl-1">    );</span><br/><span class="hl-1">});</span><br/><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-3">Component</span><span class="hl-1"> = (</span><span class="hl-4">array</span><span class="hl-1">: </span><span class="hl-6">number</span><span class="hl-1">[]) </span><span class="hl-0">=&gt;</span><span class="hl-1"> </span><span class="hl-7">&lt;</span><span class="hl-8">ul</span><span class="hl-7">&gt;</span><span class="hl-0">{</span><span class="hl-4">array</span><span class="hl-9">.</span><span class="hl-3">map</span><span class="hl-9">(</span><span class="hl-4">pairedCountRender</span><span class="hl-9">)</span><span class="hl-0">}</span><span class="hl-7">&lt;/</span><span class="hl-8">ul</span><span class="hl-7">&gt;</span><span class="hl-1">;</span>
 </code></pre>
 
+<a href="#react-devtools-integration" id="react-devtools-integration" style="color: inherit; text-decoration: none;">
+  <h2>React DevTools integration</h2>
+</a>
+<center>
+    <img alt="React DevTools screenshot" src="./devtools.png" height="192" />
+</center>
+
+
 <a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
   <h2>Documentation</h2>
 </a>
