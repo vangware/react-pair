@@ -128,6 +128,12 @@ const pairedCountRender = pairedCount(usePairedCount => {
 const Component = (array: number[]) => <ul>{array.map(pairedCountRender)}</ul>;
 ```
 
+## React DevTools integration
+
+<center>
+	<img alt="React DevTools screenshot" src="./devtools.png" height="192" />
+</center>
+
 ## Documentation
 
 Documentation can be found [HERE][documentation]. It is auto-generated with
