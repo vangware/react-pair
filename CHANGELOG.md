@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 -   This project adheres to [Semantic Versioning][semver].
 -   This project uses [Gitmoji][gitmoji]
 
+## 2.0.0
+
+-   :arrow_up: dependency upgrade (react 18 now, so major version bump).
+
 ## 1.0.4
 
 -   :memo: a little better docs.
