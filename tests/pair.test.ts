@@ -1,6 +1,6 @@
 import type { Tests } from "@vangware/test";
 import { createElement, useState } from "react";
-import { renderToString } from "react-dom/server.js";
+import { renderToString } from "react-dom/server";
 import { pair } from "../src/pair.js";
 import type { PairWrapperProperties } from "../src/PairWrapperProperties.js";
 
