@@ -5,7 +5,7 @@ pre-push:
         pre-compile:
             run: tsc --noEmit --project tsconfig.dist.json
         lint:
-            run: eslint {src,tests}/**/*.ts
+            run: eslint {src,tests} --ext .ts
         test:
             run: NODE_OPTIONS='--loader ts-node/esm' c8 test
         document:
