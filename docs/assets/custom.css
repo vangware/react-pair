@@ -1,3 +1,6 @@
+@import url("https://rsms.me/inter/inter.css");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
 :root {
 	--vangware-blue-light: #5ac;
 	--vangware-blue: #27b;
@@ -49,6 +52,23 @@ body.light {
 	--color-ts: var(--vangware-purple);
 }
 
+body {
+	font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+	body {
+		font-family: "Inter var", sans-serif;
+	}
+}
+
+code,
+pre {
+	font-family: "Fira Code", monospace;
+	font-variant-ligatures: common-ligatures;
+}
+
+#tsd-filter,
 .tsd-filter-group,
 .tsd-page-title {
 	display: none !important;
@@ -56,4 +76,8 @@ body.light {
 
 .container-main {
 	padding-top: 80px;
+}
+
+.tsd-panel {
+	border-radius: 0.5rem;
 }
