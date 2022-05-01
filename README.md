@@ -26,106 +26,37 @@ npm i react-pair
 
 ## Usage
 
-### Inline using current value of array for key and internal values
-
 ```tsx
 import { pair } from "react-pair";
 
-const pairedCount = pair(useCount);
+const useCount = initialCount => {
+	const [count, setCount] = useState(initialCount);
 
-const Component = (array: number[]) => (
-	<ul>
-		{array.map(key =>
-			pairedCount(usePairedCount => {
-				const props = usePairedCount(key);
+	return { onClick: () => setCount(count + 1), children: count };
+};
 
-				return (
-					<li>
-						<button
-							type="button"
-							{...props}
-						/>
-					</li>
-				);
-			})(key),
-		)}
-	</ul>
-);
-```
+const PairedCount = pair(useCount);
 
-### Inline without key but using current value for internal values
-
-```tsx
-import { pair } from "react-pair";
-
-const pairedCount = pair(useCount);
-
-const Component = (array: number[]) => (
+const Component = ({ array = [] }) => (
 	<ul>
 		{array.map(key => (
-			<li key={key}>
-				{pairedCount(usePairedCount => {
+			<PairedCount key={key}>
+				{usePairedCount => {
 					const props = usePairedCount(key);
 
 					return (
-						<button
-							type="button"
-							{...props}
-						/>
+						<li>
+							<button
+								type="button"
+								{...props}
+							/>
+						</li>
 					);
-				})()}
-			</li>
+				}}
+			</PairedCount>
 		))}
 	</ul>
 );
-```
-
-### Not inline, and no key, with later execution
-
-```tsx
-import { pair } from "react-pair";
-
-const pairedCount = pair(useCount);
-
-const pairedCountRender = pairedCount(usePairedCount => {
-	const props = usePairedCount(0);
-
-	return (
-		<button
-			type="button"
-			{...props}
-		/>
-	);
-});
-
-const Component = (array: number[]) => (
-	<ul>
-		{array.map(key => (
-			<li key={key}>{pairedCountRender()}</li>
-		))}
-	</ul>
-);
-```
-
-### Not inline, with key and later execution.
-
-```tsx
-import { pair } from "react-pair";
-
-const pairedCountRender = pairedCount(usePairedCount => {
-	const props = usePairedCount(0);
-
-	return (
-		<li>
-			<button
-				type="button"
-				{...props}
-			/>
-		</li>
-	);
-});
-
-const Component = (array: number[]) => <ul>{array.map(pairedCountRender)}</ul>;
 ```
 
 ## React DevTools integration
