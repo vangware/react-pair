@@ -2,9 +2,9 @@ import type { Tests } from "@vangware/test";
 import { createElement, useState } from "react";
 import { renderToString } from "react-dom/server";
 import { pair } from "../src/pair.js";
-import type { PairWrapperProperties } from "../src/PairWrapperProperties.js";
+import type { PairedRenderFunction } from "../src/PairedRenderFunction.js";
 
-const render = (usePairedState: typeof useState) => {
+const children = (usePairedState: typeof useState) => {
 	// eslint-disable-next-line react-hooks/rules-of-hooks
 	const [count, setCount] = usePairedState(0);
 
@@ -17,30 +17,36 @@ const render = (usePairedState: typeof useState) => {
 
 const key = "TEST";
 
-const pairedUseStateRender = pair(useState)(render);
+const PairedState = pair(useState);
 
 export default [
 	{
 		given: "a paired hook with key",
 		must: "return component wrapping hook and with key",
-		received: renderToString(pairedUseStateRender(key)),
+		received: renderToString(createElement(PairedState, { children, key })),
 		wanted: renderToString(
 			createElement(
-				(properties: PairWrapperProperties<typeof useState>) =>
-					properties.render(useState),
-				{ key, render },
+				({
+					children: render,
+				}: {
+					readonly children: PairedRenderFunction<typeof useState>;
+				}) => render(useState),
+				{ children, key },
 			),
 		),
 	},
 	{
 		given: "a paired hook without key",
 		must: "return component wrapping hook and without key",
-		received: renderToString(pairedUseStateRender()),
+		received: renderToString(createElement(PairedState, { children })),
 		wanted: renderToString(
 			createElement(
-				(properties: PairWrapperProperties<typeof useState>) =>
-					properties.render(useState),
-				{ render },
+				({
+					children: render,
+				}: {
+					readonly children: PairedRenderFunction<typeof useState>;
+				}) => render(useState),
+				{ children },
 			),
 		),
 	},

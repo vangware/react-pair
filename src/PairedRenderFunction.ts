@@ -6,7 +6,7 @@ import type { ReactElement } from "react";
  *
  * @category Internal
  */
-export type RenderFunction<Hook extends GenericFunction> = Unary<
+export type PairedRenderFunction<Hook extends GenericFunction> = Unary<
 	Hook,
 	ReactElement
 >;
