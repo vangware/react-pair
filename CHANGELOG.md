@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 -   This project adheres to [Semantic Versioning][semver].
 -   This project uses [Gitmoji][gitmoji]
 
+## 3.0.1
+
+-   :arrow_up: dependency upgrade.
+
 ## 3.0.0
 
 -   :building_construction: change `pair` to return a React element instead of a
