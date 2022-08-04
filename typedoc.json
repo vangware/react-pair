@@ -1,5 +1,6 @@
 {
 	"cleanOutputDir": false,
+	"cname": "react-pair.vangware.com",
 	"customCss": "./node_modules/@vangware/configs/typedoc.css",
 	"entryPoints": ["./src/index.ts"],
 	"gitRevision": "main",
