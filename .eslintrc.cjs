@@ -1,1 +1,1 @@
-module.exports = require("@vangware/configs/.eslintrc.react.js");
+module.exports = require("@vangware/configs/.eslintrc.react.cjs");
