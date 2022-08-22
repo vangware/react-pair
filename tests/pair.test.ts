@@ -23,31 +23,39 @@ export default [
 	{
 		given: "a paired hook with key",
 		must: "return component wrapping hook and with key",
-		received: renderToString(createElement(PairedState, { children, key })),
-		wanted: renderToString(
-			createElement(
-				({
-					children: render,
-				}: {
-					readonly children: PairedRenderFunction<typeof useState>;
-				}) => render(useState),
-				{ children, key },
+		received: () =>
+			renderToString(createElement(PairedState, { children, key })),
+		wanted: () =>
+			renderToString(
+				createElement(
+					({
+						children: render,
+					}: {
+						readonly children: PairedRenderFunction<
+							typeof useState
+						>;
+					}) => render(useState),
+					{ children, key },
+				),
 			),
-		),
 	},
 	{
 		given: "a paired hook without key",
 		must: "return component wrapping hook and without key",
-		received: renderToString(createElement(PairedState, { children })),
-		wanted: renderToString(
-			createElement(
-				({
-					children: render,
-				}: {
-					readonly children: PairedRenderFunction<typeof useState>;
-				}) => render(useState),
-				{ children },
+		received: () =>
+			renderToString(createElement(PairedState, { children })),
+		wanted: () =>
+			renderToString(
+				createElement(
+					({
+						children: render,
+					}: {
+						readonly children: PairedRenderFunction<
+							typeof useState
+						>;
+					}) => render(useState),
+					{ children },
+				),
 			),
-		),
 	},
 ] as Tests;
