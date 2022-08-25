@@ -4,7 +4,8 @@
 ![License][license-badge] ![NPM Version][npm-version-badge]
 ![Open Issues][open-issues-badge]
 
-🖇️ Util to help with the paired hook pattern.
+🖇️ Util to help with the
+[paired hook pattern](https://知る.dev/blog/vangware/the-paired-hook-pattern-4mo0).
 
 ## Installation
 
