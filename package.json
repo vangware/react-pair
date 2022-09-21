@@ -1,7 +1,7 @@
 {
 	"name": "react-pair",
 	"description": "Util to help with the paired hook pattern",
-	"version": "3.0.5",
+	"version": "3.0.6",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
