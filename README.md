@@ -4,8 +4,7 @@
 ![License][license-badge] ![NPM Version][npm-version-badge]
 ![Open Issues][open-issues-badge]
 
-🖇️ Util to help with the
-[paired hook pattern](https://知る.dev/blog/vangware/the-paired-hook-pattern-4mo0).
+🖇️ Util to help with the [paired hook pattern][article].
 
 ## Installation
 
@@ -47,10 +46,7 @@ const Component = ({ array = [] }) => (
 
 					return (
 						<li>
-							<button
-								type="button"
-								{...props}
-							/>
+							<button type="button" {...props} />
 						</li>
 					);
 				}}
@@ -79,6 +75,7 @@ Changelog can be found [HERE][changelog].
 
 <!-- Reference -->
 
+[article]: https://lukeshiru.dev/articles/the-paired-hook-pattern
 [build-status-badge]:
 	https://img.shields.io/github/workflow/status/vangware/react-pair/Test%20&%20Coverage.svg?style=for-the-badge&labelColor=666&color=0a8&link=https://github.com/vangware/react-pair/actions
 [changelog]: https://github.com/vangware/react-pair/blob/main/CHANGELOG.md

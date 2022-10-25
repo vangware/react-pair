@@ -5,81 +5,85 @@ All notable changes to this project will be documented in this file.
 -   This project adheres to [Semantic Versioning][semver].
 -   This project uses [Gitmoji][gitmoji]
 
+## 3.0.9
+
+-   ⬆️ dependency upgrade.
+-   📝 update `CHANGELOG.md` to use emojis instead of aliases.
+
 ## 3.0.8
 
--   :arrow_up: dependency upgrade.
+-   ⬆️ dependency upgrade.
 
 ## 3.0.7
 
--   :arrow_up: dependency upgrade.
--   :wrench: add `"sideEffects": false` to `package.json`.
+-   ⬆️ dependency upgrade.
+-   🔧 add `"sideEffects": false` to `package.json`.
 
 ## 3.0.6
 
--   :arrow_up: dependency upgrade.
--   :memo: update docs.
+-   ⬆️ dependency upgrade.
+-   📝 update docs.
 
 ## 3.0.5
 
--   :arrow_up: dependency upgrade.
+-   ⬆️ dependency upgrade.
 
 ## 3.0.4
 
--   :arrow_up: dependency upgrade.
--   :memo: update README.md with link to blog post explaining the Paired Hook
+-   ⬆️ dependency upgrade.
+-   📝 update README.md with link to blog post explaining the Paired Hook
     pattern.
 
 ## 3.0.3
 
--   :arrow_up: dependency upgrade.
+-   ⬆️ dependency upgrade.
 
 ## 3.0.2
 
--   :arrow_up: dependency upgrade.
--   :memo: docs update.
+-   ⬆️ dependency upgrade.
+-   📝 docs update.
 
 ## 3.0.1
 
--   :arrow_up: dependency upgrade.
+-   ⬆️ dependency upgrade.
 
 ## 3.0.0
 
--   :building_construction: change `pair` to return a React element instead of a
-    curried function.
+-   🏗 change `pair` to return a React element instead of a curried function.
 
 ## 2.0.2
 
--   :arrow_up: dependency upgrade.
+-   ⬆️ dependency upgrade.
 
 ## 2.0.1
 
--   :arrow_up: dependency upgrade.
--   :wrench: better eslint script config.
+-   ⬆️ dependency upgrade.
+-   🔧 better eslint script config.
 
 ## 2.0.0
 
--   :arrow_up: dependency upgrade (react 18 now, so major version bump).
+-   ⬆️ dependency upgrade (react 18 now, so major version bump).
 
 ## 1.0.4
 
--   :memo: a little better docs.
--   :arrow_up: dependency upgrade.
+-   📝 a little better docs.
+-   ⬆️ dependency upgrade.
 
 ## 1.0.3
 
--   :memo: a little better docs.
+-   📝 a little better docs.
 
 ## 1.0.2
 
--   :bug: fix README.md coverage and build status badges.
+-   🐛 fix README.md coverage and build status badges.
 
 ## 1.0.1
 
--   :memo: update README.md with coverage and build status badges.
+-   📝 update README.md with coverage and build status badges.
 
 ## 1.0.0
 
--   :sparkles: Initial commit.
+-   🎉 Initial commit.
 
 <!-- References -->
 
