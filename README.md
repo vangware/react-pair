@@ -1,8 +1,7 @@
 <img alt="Vangware's React Pair" src="./logo.svg" height="192" />
 
-![Build Status][build-status-badge] ![Coverage][coverage-badge]
-![License][license-badge] ![NPM Version][npm-version-badge]
-![Open Issues][open-issues-badge]
+![Coverage][coverage-badge] ![License][license-badge]
+![NPM Version][npm-version-badge] ![Open Issues][open-issues-badge]
 
 🖇️ Util to help with the [paired hook pattern][article].
 
@@ -76,8 +75,6 @@ Changelog can be found [HERE][changelog].
 <!-- Reference -->
 
 [article]: https://lukeshiru.dev/articles/the-paired-hook-pattern
-[build-status-badge]:
-	https://img.shields.io/github/workflow/status/vangware/react-pair/Test%20&%20Coverage.svg?style=for-the-badge&labelColor=666&color=0a8&link=https://github.com/vangware/react-pair/actions
 [changelog]: https://github.com/vangware/react-pair/blob/main/CHANGELOG.md
 [coverage-badge]:
 	https://img.shields.io/coveralls/github/vangware/react-pair.svg?style=for-the-badge&labelColor=666&color=0a8&link=https://coveralls.io/github/vangware/react-pair
