@@ -8,10 +8,10 @@ jobs:
             - name: Use Checkout 2
               uses: actions/checkout@v2
 
-            - name: Use Node.js 18
+            - name: Use Node.js 19
               uses: actions/setup-node@v1
               with:
-                  node-version: 18.x
+                  node-version: 19.x
 
             - name: Use pnpm 7
               uses: pnpm/action-setup@v2

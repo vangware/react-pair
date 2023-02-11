@@ -1,9 +1,7 @@
 {
-	"cleanOutputDir": false,
+	"$schema": "https://typedoc.org/schema.json",
 	"cname": "react-pair.vangware.com",
-	"customCss": "./node_modules/@vangware/configs/typedoc.css",
-	"entryPoints": ["./src/index.ts"],
-	"gitRevision": "main",
-	"hideGenerator": true,
-	"logLevel": "Warn"
+	"entryPoints": ["./src"],
+	"extends": ["@vangware/configs/typedoc.json"],
+	"name": "React Pair"
 }
