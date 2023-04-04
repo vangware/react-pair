@@ -5,18 +5,18 @@ jobs:
         name: Build
         runs-on: ubuntu-latest
         steps:
-            - name: Use Checkout 2
-              uses: actions/checkout@v2
+            - name: Use Checkout 3
+              uses: actions/checkout@v3
 
             - name: Use Node.js 19
               uses: actions/setup-node@v1
               with:
                   node-version: 19.x
 
-            - name: Use pnpm 7
+            - name: Use pnpm 8
               uses: pnpm/action-setup@v2
               with:
-                  version: 7.x
+                  version: 8.x
                   run_install: true
 
             - name: Run tests

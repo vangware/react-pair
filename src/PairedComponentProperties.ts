@@ -1,4 +1,4 @@
-import type { GenericFunction } from "@vangware/types";
+import type { Function } from "@vangware/types";
 import type { PairedRenderFunction } from "./PairedRenderFunction.js";
 
 /**
@@ -6,7 +6,7 @@ import type { PairedRenderFunction } from "./PairedRenderFunction.js";
  *
  * @category Internal
  */
-export type PairedComponentProperties<Hook extends GenericFunction> = {
+export type PairedComponentProperties<Hook extends Function> = {
 	/** Children has to be a function, and the argument is the paired hook. */
 	readonly children: PairedRenderFunction<Hook>;
 };
