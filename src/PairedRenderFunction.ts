@@ -1,4 +1,4 @@
-import type { GenericFunction, Unary } from "@vangware/types";
+import type { Function, Unary } from "@vangware/types";
 import type { ReactElement } from "react";
 
 /**
@@ -6,7 +6,7 @@ import type { ReactElement } from "react";
  *
  * @category Internal
  */
-export type PairedRenderFunction<Hook extends GenericFunction> = Unary<
+export type PairedRenderFunction<Hook extends Function> = Unary<
 	Hook,
 	ReactElement
 >;

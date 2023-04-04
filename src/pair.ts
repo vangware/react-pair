@@ -1,4 +1,4 @@
-import type { GenericFunction } from "@vangware/types";
+import type { Function } from "@vangware/types";
 import type { FunctionComponent } from "react";
 import type { PairedComponentProperties } from "./PairedComponentProperties.js";
 
@@ -39,7 +39,7 @@ import type { PairedComponentProperties } from "./PairedComponentProperties.js";
  * @param hook Hook to be paired.
  * @returns Component that expects a function as children with the paired hook.
  */
-export const pair = <Hook extends GenericFunction>(
+export const pair = <Hook extends Function>(
 	hook: Hook,
 ): FunctionComponent<PairedComponentProperties<Hook>> =>
 	Object.assign(
