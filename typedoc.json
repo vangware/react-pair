@@ -3,5 +3,5 @@
 	"cname": "react-pair.vangware.com",
 	"entryPoints": ["./src"],
 	"extends": ["@vangware/configs/typedoc.json"],
-	"name": "React Pair"
+	"name": "React Pair by Vangware"
 }
