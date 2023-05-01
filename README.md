@@ -1,4 +1,4 @@
-<img id="logo" alt="React Pair by Vangware" src="./logo.svg" height="192" />
+<img id="logo" alt="React Pair by Vangware" src="./logo.svg" height="128" />
 
 ![Coverage][coverage-badge] ![License][license-badge]
 ![NPM Version][npm-version-badge] ![Open Issues][open-issues-badge]
