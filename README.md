@@ -5,27 +5,24 @@
 
 🖇️ Util to help with the [paired hook pattern][article].
 
-## Installation
-
-### Direct usage
-
-For envs like [Deno][deno] or the browser:
-
-```js
-import { pair } from "https://esm.sh/react-pair";
-```
-
-### Local installation
-
-For Node:
-
-```sh
-npm i react-pair
-```
-
 ## Usage
 
+### 📦 Node
+
+Install `react-pair` as a dependency:
+
+```bash
+pnpm add react-pair
+# or
+npm install react-pair
+# or
+yarn add react-pair
+```
+
+Import it and use it:
+
 ```tsx
+import { useState } from "react";
 import { pair } from "react-pair";
 
 const useCount = initialCount => {
@@ -55,26 +52,81 @@ const Component = ({ array = [] }) => (
 );
 ```
 
-## React DevTools integration
+### 🦕 Deno
 
-<center>
-	<img alt="React DevTools screenshot" src="./devtools.png" height="192" />
-</center>
+Import `react-pair` using the `npm:` prefix, and use it directly:
 
-## Documentation
+```tsx
+import { useState } from "npm:react";
+import { pair } from "npm:react-pair";
 
-Documentation can be found [HERE][documentation]. It is auto-generated with
-[typedoc][typedoc] based on the JSDocs and the types in the source. Shouldn't be
-necessary to read this, code editors like [VSCode][vscode] integrate the
-documentation in the UI.
+const useCount = initialCount => {
+	const [count, setCount] = useState(initialCount);
 
-## Changelog
+	return { onClick: () => setCount(count + 1), children: count };
+};
 
-Changelog can be found [HERE][changelog].
+const PairedCount = pair(useCount);
 
-## Test coverage
+const Component = ({ array = [] }) => (
+	<ul>
+		{array.map(key => (
+			<PairedCount key={key}>
+				{usePairedCount => {
+					const props = usePairedCount(key);
 
-Test coverage can be found [HERE][coverage].
+					return (
+						<li>
+							<button type="button" {...props} />
+						</li>
+					);
+				}}
+			</PairedCount>
+		))}
+	</ul>
+);
+```
+
+### 🌎 Browser
+
+Import `react-pair` using [esm.sh][esm.sh], and use it directly:
+
+```html
+<script type="module">
+	import { createElement, useState } from "https://esm.sh/react";
+	import { pair } from "https://esm.sh/react-pair";
+
+	const useCount = initialCount => {
+		const [count, setCount] = useState(initialCount);
+
+		return { onClick: () => setCount(count + 1), children: count };
+	};
+
+	const PairedCount = pair(useCount);
+
+	const Component = ({ array = [] }) => (
+		<ul>
+			{array.map(key =>
+				createElement(PairedCount, { key }, usePairedCount => {
+					const props = usePairedCount(key);
+
+					return createElement(
+						"li",
+						null,
+						createElement("button", props),
+					);
+				}),
+			)}
+		</ul>
+	);
+</script>
+```
+
+## Useful links
+
+-   📝 [Documentation][documentation]: TypeDoc generated documentation.
+-   ⏳ [Changelog][changelog]: List of changes between versions.
+-   ✅ [Tests Coverage][coverage]: Coveralls page with tests coverage.
 
 <!-- Reference -->
 
@@ -83,14 +135,11 @@ Test coverage can be found [HERE][coverage].
 [coverage-badge]:
 	https://img.shields.io/coveralls/github/vangware/react-pair.svg?style=for-the-badge&labelColor=666&color=0a8&link=https://coveralls.io/github/vangware/react-pair
 [coverage]: https://coveralls.io/github/vangware/react-pair
-[deno]: https://deno.land/
 [documentation]: https://react-pair.vangware.com
+[esm.sh]: https://esm.sh
 [license-badge]:
 	https://img.shields.io/npm/l/react-pair.svg?style=for-the-badge&labelColor=666&color=0a8&link=https://github.com/vangware/react-pair/blob/main/LICENSE
 [npm-version-badge]:
 	https://img.shields.io/npm/v/react-pair.svg?style=for-the-badge&labelColor=666&color=0a8&link=https://npm.im/react-pair
 [open-issues-badge]:
 	https://img.shields.io/github/issues/vangware/react-pair.svg?style=for-the-badge&labelColor=666&color=0a8&link=https://github.com/vangware/react-pair/issues
-[typedoc]: https://typedoc.org/
-[vangware]: https://vangware.com
-[vscode]: https://code.visualstudio.com/
