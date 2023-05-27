@@ -130,7 +130,7 @@ Import `react-pair` using [esm.sh][esm.sh], and use it directly:
 
 <!-- Reference -->
 
-[article]: https://lukeshiru.dev/articles/the-paired-hook-pattern
+[article]: https://luke.sh/articles/the-paired-hook-pattern
 [changelog]: https://github.com/vangware/react-pair/blob/main/CHANGELOG.md
 [coverage-badge]:
 	https://img.shields.io/coveralls/github/vangware/react-pair.svg?style=for-the-badge&labelColor=666&color=0a8&link=https://coveralls.io/github/vangware/react-pair
