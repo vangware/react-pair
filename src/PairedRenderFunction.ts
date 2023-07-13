@@ -1,5 +1,5 @@
 import type { Function, Unary } from "@vangware/types";
-import type { ReactElement } from "react";
+import type { createElement } from "react";
 
 /**
  * Function that receives the paired hook and should return a `ReactElement`.
@@ -8,5 +8,5 @@ import type { ReactElement } from "react";
  */
 export type PairedRenderFunction<Hook extends Function> = Unary<
 	Hook,
-	ReactElement
+	ReturnType<typeof createElement>
 >;
