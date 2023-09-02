@@ -4,8 +4,7 @@ import { renderToString } from "react-dom/server";
 import type { PairedComponentProperties } from "../src/PairedComponentProperties.js";
 import { pair } from "../src/pair.js";
 
-const render = (usePairedState: typeof useState) => {
-	// eslint-disable-next-line react-hooks/rules-of-hooks
+const Render = (usePairedState: typeof useState) => {
 	const [count, setCount] = usePairedState(0);
 
 	return (
@@ -27,13 +26,13 @@ export default [
 		given: "a paired hook with key",
 		must: "return component wrapping hook and with key",
 		received: () =>
-			renderToString(<PairedState key={key}>{render}</PairedState>),
-		wanted: () => renderToString(<Wanted key={key}>{render}</Wanted>),
+			renderToString(<PairedState key={key}>{Render}</PairedState>),
+		wanted: () => renderToString(<Wanted key={key}>{Render}</Wanted>),
 	},
 	{
 		given: "a paired hook without key",
 		must: "return component wrapping hook and without key",
-		received: () => renderToString(<PairedState>{render}</PairedState>),
-		wanted: () => renderToString(<Wanted>{render}</Wanted>),
+		received: () => renderToString(<PairedState>{Render}</PairedState>),
+		wanted: () => renderToString(<Wanted>{Render}</Wanted>),
 	},
 ] satisfies Tests<string>;
