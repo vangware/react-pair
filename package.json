@@ -16,9 +16,9 @@
 		"@types/node": "^20.6.0",
 		"@types/react": "^18.2.21",
 		"@types/react-dom": "^18.2.7",
-		"@vangware/configs": "^5.1.6",
-		"@vangware/test": "^10.3.21",
-		"@vangware/types": "^6.2.4",
+		"@vangware/configs": "^5.1.7",
+		"@vangware/test": "^10.3.22",
+		"@vangware/types": "^6.2.5",
 		"c8": "^8.0.1",
 		"eslint": "^8.49.0",
 		"npm-run-all": "^4.1.5",
@@ -26,7 +26,7 @@
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"rimraf": "^5.0.1",
-		"tsx": "^3.12.8",
+		"tsx": "^3.12.9",
 		"typescript": "~5.2.2"
 	},
 	"engines": {
